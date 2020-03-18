@@ -8,42 +8,12 @@ green(){
 red(){
     echo -e "\033[31m\033[01m$1\033[0m"
 }
-#检测系统版本，获取安装命令
-if [[ -f /etc/redhat-release ]]; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "debian"; then
-    release="debian"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "debian"; then
-    release="debian"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-    systemPackage="apt-get"
-    systempwd="/lib/systemd/system/"
-elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-    systemPackage="yum"
-    systempwd="/usr/lib/systemd/system/"
-fi
-
 clear
 green "=========================================================="
  blue "支持：centos7+/debian9+/ubuntu16.04+"
  blue "网站：www.v2rayssr.com （已开启禁止国内访问）"
  blue "YouTube频道：波仔分享"
+ blue "本脚本禁止在国内网站转载"
 green "=========================================================="
   red "简介：本脚本为Trojan分解安装第三部分（Trojan服务器配置）"
 green "=========================================================="
