@@ -41,6 +41,9 @@ cat > /usr/local/etc/trojan/config.json <<-EOF
         "alpn": [
             "http/1.1"
         ],
+        "alpn_port_override": {
+            "h2": 81
+        },
         "reuse_session": true,
         "session_ticket": false,
         "session_timeout": 600,
